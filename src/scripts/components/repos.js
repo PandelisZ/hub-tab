@@ -43,9 +43,11 @@ const GET_REPOS = gql`
 `;
 
 const Repos = () => {
-    const { loading, error, data } = useQuery(GET_REPOS);
+    const { loading, error, data } = useQuery(GET_REPOS, {
+        fetchPolicy: 'cache-and-network',
+    });
 
-    if (loading)
+    if (loading && !data)
         return (
             <h2>
                 <span>Loading</span>
