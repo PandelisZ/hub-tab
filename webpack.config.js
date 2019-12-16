@@ -32,7 +32,8 @@ module.exports = {
         contentScript: './src/scripts/contentScript.js',
         popup: './src/scripts/popup.js',
         options: './src/scripts/options.js',
-        styles: ['./src/styles/popup.scss', './src/styles/options.scss'],
+        newtab: './src/scripts/newtab.js',
+        styles: ['./src/styles/popup.scss', './src/styles/options.scss', './src/styles/newtab.scss'],
     },
 
     output: {
@@ -62,6 +63,12 @@ module.exports = {
             // inject: false,
             chunks: ['popup'],
             filename: 'popup.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/newtab.html',
+            // inject: false,
+            chunks: ['newtab'],
+            filename: 'newtab.html',
         }),
         new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
         new WriteWebpackPlugin([{ name: manifest.name, data: Buffer.from(manifest.content) }]),

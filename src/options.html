@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Options</title>
-    <link rel="stylesheet" href="css/options.css" />
-  </head>
 
-  <body></body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HubTab - Options</title>
+  <link rel="stylesheet" href="css/newtab.css" />
+</head>
+
+<body>
+  <div class="container-lg m-auto">
+    <h1 class="p-4">HubTab Options</h1>
+    <form id="form">
+      <input id="personal-access-token" class="form-control input-lg" type="password" placeholder="Personal access token" aria-label="Personal access token" />
+      <p class="note" id="help-text-for-input">
+        Create a <a href="https://github.com/settings/tokens" target="__blank">personal access token</a> with repository read access
+      </p>
+      <button class="btn mr-2" type="submit">Save</button>
+    </form>
+  </div>
+</body>
+
 </html>

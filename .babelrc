@@ -1,5 +1,6 @@
 {
   "presets": [
+    "@babel/preset-react",
     [
       // Latest stable ECMAScript features
       "@babel/preset-env",
