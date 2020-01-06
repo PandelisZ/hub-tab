@@ -14,20 +14,16 @@ const manifestInput = {
 
     description: 'Sample description',
     homepage_url: 'https://github.com/pandelisz/hub-tab',
-    short_name: 'Sample Name',
+    short_name: 'Hub Tab',
     chrome_url_overrides: {
         newtab: 'newtab.html',
     },
     permissions: ['storage'],
     content_security_policy: "script-src 'self' 'unsafe-eval'; object-src 'self'",
 
-    '__chrome|firefox__author': 'abhijithvijayan',
-    __opera__developer: {
-        name: 'abhijithvijayan',
-    },
-
+    '__chrome|firefox__author': 'pandelis',
     __firefox__applications: {
-        gecko: { id: '{754FB1AD-CC3B-4856-B6A0-7786F8CA9D17}' },
+        gecko: { id: '{f5ac8157-f804-4b6a-816b-01fa66dffedb}' },
     },
 
     __chrome__minimum_chrome_version: '49',
